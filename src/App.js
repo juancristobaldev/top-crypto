@@ -1,10 +1,13 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { Text } from "./components/generals/Text";
+import {
+  FaArrowRotateRight,
+  FaChevronDown,
+  FaChevronUp,
+} from "react-icons/fa6";
+import { TableCrypto } from "./components/generals/TableCrypto";
 import { Footer } from "./components/Footer";
-import { FaArrowRotateRight } from "react-icons/fa6";
 import Loading from "react-loading";
-import { Table } from "./components/generals/TableCrypto";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -17,13 +20,6 @@ function App() {
   const sortArr = (orderBy = "desc", arr, field) => {
     if (orderBy === "desc") return arr.sort((a, b) => b[field] - a[field]);
     else return arr.sort((a, b) => a[field] - b[field]);
-  };
-
-  const changeFilter = (value) => {
-    setFilter({
-      value,
-      order: filter.order == "desc" ? "asc" : "desc",
-    });
   };
 
   const getTopCrypto = async () => {
@@ -81,6 +77,26 @@ function App() {
     }
   }, []);
 
+  const Text = ({ variant, children, weight, className, style }) => {
+    switch (variant) {
+      case "title":
+        return (
+          <h1
+            style={style}
+            className={`text-white text-3xl font-semibold ${weight} ${className}`}
+          >
+            {children}
+          </h1>
+        );
+      case "description":
+        return (
+          <p style={style} className={`text-white  ${weight} ${className}`}>
+            {children}
+          </p>
+        );
+    }
+  };
+
   const LoadingScreen = () => {
     return (
       <div className="w-full h-screen absolute top-0 left-0 flex flex-col justify-center items-center">
@@ -116,6 +132,13 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const changeFilter = (value) => {
+    setFilter({
+      value,
+      order: filter.order == "desc" ? "asc" : "desc",
+    });
+  };
+
   if (loading /* && !topCrypto.arr.length */) return <LoadingScreen />;
   return (
     <>
@@ -149,10 +172,10 @@ function App() {
           height: "calc(100vh - 100px - 90px)",
         }}
       >
-        <Table
-          topCrypto={topCrypto}
-          filter={filter}
+        <TableCrypto
           changeFilter={changeFilter}
+          filter={filter}
+          topCrypto={topCrypto}
         />
       </div>
       <Footer />

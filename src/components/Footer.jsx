@@ -4,7 +4,7 @@ export const Footer = () => {
     <footer className="h-[90px] w-full">
       <Text
         className={
-          "text-center  h-full flex flex-col justify-center items-center"
+          "text-center text-white h-full flex flex-col justify-center items-center"
         }
         variant={"description"}
       >
