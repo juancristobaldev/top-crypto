@@ -1,71 +1,45 @@
-# Getting Started with Create React App
+# HolaJuniors - Visualización en Tiempo Real de Criptomonedas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desafío de programación de [HolaJuniors](https://holajuniors.com).
 
-## Available Scripts
+Nuestros desafíos te ayudan a mejorar tus habilidades de programación mediante la creación de proyectos realistas.
 
-In the project directory, you can run:
+## Requerimientos del proyecto: [Visualización en Tiempo Real de Criptomonedas](https://holajuniors.com/challenges/visualizacion-en-tiempo-real-de-criptomonedas)
 
-### `npm start`
+Imagina que te encuentras inmerso en el fascinante mundo de las criptomonedas, y se te ha encomendado la tarea de presentar las 10 criptomonedas más importantes del mercado en tiempo real.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para eso puedes utilizar la API: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=10
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O sientete libre de utilizar la que más te guste.
 
-### `npm test`
+A continuación, se detallan los pasos que deberás seguir:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Integración con la API:
+   Conecta tu aplicación a la API proporcionada para obtener datos actualizados sobre las criptomonedas en tiempo real.
+   Asegúrate de manejar adecuadamente las solicitudes a la API y gestionar posibles errores.
 
-### `npm run build`
+2 . Presentación de datos en una tabla:
+Diseña una interfaz que presente la información de las 10 criptomonedas más importantes de manera clara y organizada.
+Muestra detalles relevantes, como el nombre, símbolo, precio actual y cambios recientes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Actualización automática de datos (opcional):
+   Implementa la funcionalidad para actualizar automáticamente los datos de la tabla a intervalos regulares, reflejando la dinámica cambiante del mercado de criptomonedas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Stack utilizado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React.js Tailwind CSS
 
-### `npm run eject`
+## Screenshots y vista previa
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+https://top-crypto.vercel.app/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalación
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm init -y
+npm install
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Licencia
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# top-crypto
+[MIT](https://choosealicense.com/licenses/mit/)
+La mayoría de los proyectos de código abierto utilizan la licencia MIT. Siéntete libre de elegir la licencia que prefieras
