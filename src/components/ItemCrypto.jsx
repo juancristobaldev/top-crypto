@@ -45,7 +45,7 @@ export const ItemCrypto = ({ item }) => {
             {current_price >= 1000
               ? current_price.toLocaleString("en-US")
               : current_price.toFixed(2)}
-            USD
+            {" USD"}
           </Text>
         </td>
         <td className="flex justify-center items-center gap-1">
